@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7fba91;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f9c6c;
+}
+
+/* Hero floating badges */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.animate-float-delay-2 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.animate-float-delay-3 {
+  animation: float 5.2s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+/* Our Ventures auto-scrolling marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  animation: marquee 38s linear infinite;
+}
+
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.venture-card {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Manual drag/swipe marquees (Our Ventures, Testimonials): JS drives the
+   scroll position, so the CSS keyframe animation is disabled and the wrap
+   becomes a real (scrollbar-hidden) horizontal scroll container. */
+.marquee-track.marquee-manual {
+  animation: none;
+}
+
+.marquee-drag {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.marquee-drag::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee-drag.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.marquee-drag.dragging * {
+  user-select: none;
+}
+
+/* Our Partners logo strip */
+.marquee-track.partner-track {
+  animation-duration: 28s;
+  gap: 0;
+}
+
+.partner-logo {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 2rem;
+  white-space: nowrap;
+  font-size: 1.05rem;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Testimonials auto-scrolling marquee */
+.marquee-track.testimonial-track {
+  animation-duration: 45s;
+}
+
+.testimonial-card {
+  flex: 0 0 auto;
+  width: 380px;
+}
+
+/* FAQ accordion: hide default marker, use custom chevron */
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, #22663d, #c68d1f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B.K.S Venture | Building Ventures That Move The World Forward</title>
+  <meta name="description" content="B.K.S Venture is a diversified business group spanning real estate, global trade & logistics, and sustainable enterprise.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Sora', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eef7f1',
+              100: '#d5ead9',
+              200: '#aed5b8',
+              300: '#7fba91',
+              400: '#4f9c6c',
+              500: '#2f7f4e',
+              600: '#22663d',
+              700: '#1c5133',
+              800: '#17402a',
+              900: '#0f2c1c',
+            },
+            gold: {
+              50: '#fdf9ec',
+              100: '#f9edc2',
+              200: '#f3d98a',
+              300: '#eac154',
+              400: '#dfa62f',
+              500: '#c68d1f',
+              600: '#a06f18',
+              700: '#7c5616',
+              800: '#634516',
+              900: '#513a16',
+            },
+          },
+          boxShadow: {
+            soft: '0 10px 40px -10px rgba(15, 44, 28, 0.25)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white">
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="top" class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="#top" class="flex items-center gap-3">
+          <img src="assets/images/image.png" alt="B.K.S Venture logo" class="h-12 w-12 object-contain">
+          <span class="font-heading font-bold text-xl text-primary-800 tracking-wide">B.K.S <span class="text-gold-500">Venture</span></span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#about" class="hover:text-primary-700 transition-colors">About</a>
+          <a href="#services" class="hover:text-primary-700 transition-colors">Services</a>
+          <a href="#projects" class="hover:text-primary-700 transition-colors">Projects</a>
+          <a href="#why-us" class="hover:text-primary-700 transition-colors">Why Us</a>
+          <a href="#partners" class="hover:text-primary-700 transition-colors">Partners</a>
+          <a href="#testimonials" class="hover:text-primary-700 transition-colors">Testimonials</a>
+          <a href="#faq" class="hover:text-primary-700 transition-colors">FAQ</a>
+          <a href="#contact" class="hover:text-primary-700 transition-colors">Contact</a>
+        </nav>
+
+        <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors shadow-soft">
+          Get in Touch
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+
+        <button id="menu-btn" class="lg:hidden text-primary-800" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile sidebar overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+
+  <!-- Mobile sidebar drawer -->
+  <aside id="mobile-menu" class="fixed top-0 right-0 z-[60] h-full w-[300px] max-w-[85vw] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col" aria-hidden="true">
+    <div class="flex items-center justify-between px-6 h-20 border-b border-slate-100 shrink-0">
+      <a href="#top" class="flex items-center gap-2">
+        <img src="assets/images/image.png" alt="B.K.S Venture logo" class="h-9 w-9 object-contain">
+        <span class="font-heading font-bold text-primary-800">B.K.S <span class="text-gold-500">Venture</span></span>
+      </a>
+      <button id="menu-close" class="text-slate-500 hover:text-primary-800 transition-colors" aria-label="Close menu">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-1">
+      <a href="#about" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">About</a>
+      <a href="#services" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Services</a>
+      <a href="#projects" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Projects</a>
+      <a href="#why-us" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Why Us</a>
+      <a href="#partners" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Partners</a>
+      <a href="#testimonials" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Testimonials</a>
+      <a href="#faq" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">FAQ</a>
+      <a href="#contact" class="mobile-nav-link block text-slate-700 font-medium py-3">Contact</a>
+    </nav>
+
+    <div class="px-6 py-6 border-t border-slate-100 shrink-0">
+      <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="mobile-nav-link flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors">
+        Get in Touch <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </aside>
+
+  <main class="pt-20">
+
+    <!-- ===== HERO ===== -->
+    <section class="relative overflow-hidden bg-black min-h-[88vh] flex items-center">
+      <div class="absolute inset-0">
+        <img src="assets/images/skyline.jpg" alt="Kathmandu Valley skyline with the Himalayas in the distance" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/45 to-black"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary-900/30 via-transparent to-gold-900/15"></div>
+      </div>
+
+      <div class="absolute top-24 -left-24 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 -right-24 w-[28rem] h-[28rem] bg-gold-500/20 rounded-full blur-3xl"></div>
+
+      <!-- floating badges -->
+      <div data-aos="zoom-in" data-aos-delay="200" class="hidden lg:flex absolute top-32 left-[8%] w-14 h-14 rounded-2xl bg-white/10 backdrop-blur border border-white/20 items-center justify-center text-gold-300 animate-float">
+        <i data-lucide="building-2" class="w-6 h-6"></i>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300" class="hidden lg:flex absolute top-48 right-[10%] w-14 h-14 rounded-2xl bg-white/10 backdrop-blur border border-white/20 items-center justify-center text-gold-300 animate-float-delay-1">
+        <i data-lucide="plane" class="w-6 h-6"></i>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="400" class="hidden lg:flex absolute bottom-40 left-[14%] w-14 h-14 rounded-2xl bg-white/10 backdrop-blur border border-white/20 items-center justify-center text-gold-300 animate-float-delay-2">
+        <i data-lucide="truck" class="w-6 h-6"></i>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="500" class="hidden lg:flex absolute bottom-52 right-[16%] w-14 h-14 rounded-2xl bg-white/10 backdrop-blur border border-white/20 items-center justify-center text-gold-300 animate-float-delay-3">
+        <i data-lucide="leaf" class="w-6 h-6"></i>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-10 py-28 text-center">
+        <span data-aos="fade-up" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-gold-300 text-xs font-semibold tracking-wide uppercase px-4 py-2 rounded-full border border-white/20">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          A Diversified Venture Group
+        </span>
+
+        <h1 data-aos="fade-up" data-aos-delay="100" class="mt-6 font-heading font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-tight text-white">
+          Building Ventures That <span class="text-gold-400">Move The World</span> Forward
+        </h1>
+
+        <p data-aos="fade-up" data-aos-delay="200" class="mt-6 text-lg text-slate-300 max-w-2xl mx-auto">
+          B.K.S Venture unites real estate, global trade &amp; logistics, and sustainable enterprise under one roof —
+          delivering growth with integrity, across borders and industries.
+        </p>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="#services" class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-full transition-colors shadow-soft">
+            Explore Our Ventures
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 rounded-full transition-colors">
+            Get in Touch
+          </a>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="400" class="mt-12 flex flex-wrap items-center justify-center gap-3">
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 text-slate-200 text-xs font-medium px-4 py-2 rounded-full"><i data-lucide="building-2" class="w-3.5 h-3.5 text-gold-300"></i>Real Estate</span>
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 text-slate-200 text-xs font-medium px-4 py-2 rounded-full"><i data-lucide="truck" class="w-3.5 h-3.5 text-gold-300"></i>Logistics</span>
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 text-slate-200 text-xs font-medium px-4 py-2 rounded-full"><i data-lucide="plane" class="w-3.5 h-3.5 text-gold-300"></i>Global Trade</span>
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 text-slate-200 text-xs font-medium px-4 py-2 rounded-full"><i data-lucide="leaf" class="w-3.5 h-3.5 text-gold-300"></i>Sustainability</span>
+        </div>
+      </div>
+
+      <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce" aria-label="Scroll to About section">
+        <i data-lucide="chevron-down" class="w-7 h-7"></i>
+      </a>
+    </section>
+
+    <!-- ===== HERO STATS BAR ===== -->
+    <div class="relative z-20 -mt-14 sm:-mt-20 px-6" data-aos="fade-up">
+      <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-soft border border-slate-100 grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-slate-100 overflow-hidden">
+        <div class="text-center py-8 px-4">
+          <p class="font-heading font-extrabold text-3xl text-primary-800">10+</p>
+          <p class="text-sm text-slate-500 mt-1">Years of Trust</p>
+        </div>
+        <div class="text-center py-8 px-4">
+          <p class="font-heading font-extrabold text-3xl text-primary-800">6</p>
+          <p class="text-sm text-slate-500 mt-1">Core Ventures</p>
+        </div>
+        <div class="text-center py-8 px-4">
+          <p class="font-heading font-extrabold text-3xl text-primary-800">Global</p>
+          <p class="text-sm text-slate-500 mt-1">Reach &amp; Network</p>
+        </div>
+        <div class="text-center py-8 px-4">
+          <p class="font-heading font-extrabold text-3xl text-primary-800">100%</p>
+          <p class="text-sm text-slate-500 mt-1">Committed to Growth</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="relative overflow-hidden py-24 sm:py-32">
+      <!-- decorative backdrop -->
+      <p class="pointer-events-none select-none absolute -top-6 sm:-top-10 left-0 right-0 text-center font-heading font-extrabold text-primary-50 text-[5rem] sm:text-[9rem] lg:text-[11rem] leading-none tracking-tight z-0" aria-hidden="true">ABOUT US</p>
+      <div class="absolute top-1/3 -left-24 w-80 h-80 bg-primary-100/60 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 -right-24 w-96 h-96 bg-gold-100/60 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-20 items-center">
+        <div data-aos="fade-right" class="relative max-w-md mx-auto">
+          <!-- dot pattern accent -->
+          <div class="hidden sm:block absolute -top-8 -left-8 w-28 h-28 z-0" aria-hidden="true" style="background-image: radial-gradient(currentColor 1.5px, transparent 1.5px); background-size: 14px 14px; color: #c68d1f;"></div>
+
+          <div class="relative z-10 aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-soft ring-1 ring-black/5">
+            <img src="assets/images/bridge.jpg" alt="Kathmandu city view from Swayambhunath" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/40 via-transparent to-transparent"></div>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-delay="200" class="absolute z-20 -bottom-8 -right-6 sm:-right-12 w-32 sm:w-40 aspect-square rounded-3xl overflow-hidden shadow-soft border-4 border-white">
+            <img src="assets/images/forest.jpg" alt="Pokhara valley representing our sustainable outlook" class="w-full h-full object-cover">
+          </div>
+
+          <div class="absolute z-20 -top-6 -left-4 sm:-left-8 bg-gold-500 text-white rounded-2xl px-5 py-3.5 shadow-soft">
+            <p class="font-heading font-bold text-xl leading-none">10+</p>
+            <p class="text-[11px] tracking-wide uppercase mt-1">Years of Trust</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <span class="inline-flex items-center gap-2 text-gold-600 font-semibold tracking-wide uppercase text-sm">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            About Us
+          </span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">
+            Who We Are
+          </h2>
+
+          <div class="mt-6 relative pl-6 border-l-4 border-gold-400">
+            <i data-lucide="quote" class="w-6 h-6 text-gold-300 mb-2"></i>
+            <p class="font-heading text-xl sm:text-2xl text-primary-900 leading-snug">
+              Real progress comes from <span class="text-gold-600">connecting industries</span>, not isolating them.
+            </p>
+          </div>
+
+          <p class="mt-6 text-slate-600 leading-relaxed">
+            B.K.S Venture is a forward-thinking business group built on that simple belief. From skylines we help shape,
+            to goods we move across borders, to sustainable initiatives we champion — every venture we undertake is
+            rooted in quality, trust and long-term value.
+          </p>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="group bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-soft hover:-translate-y-1 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <p class="mt-4 font-heading font-semibold text-primary-900 text-sm">Integrity-driven</p>
+              <p class="mt-1 text-xs text-slate-500 leading-relaxed">Transparent dealings across every venture.</p>
+            </div>
+            <div class="group bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-soft hover:-translate-y-1 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <p class="mt-4 font-heading font-semibold text-primary-900 text-sm">Globally connected</p>
+              <p class="mt-1 text-xs text-slate-500 leading-relaxed">A network spanning trade routes and markets.</p>
+            </div>
+            <div class="group bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-soft hover:-translate-y-1 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+              </div>
+              <p class="mt-4 font-heading font-semibold text-primary-900 text-sm">Future-focused</p>
+              <p class="mt-1 text-xs text-slate-500 leading-relaxed">Investing in sustainable, lasting growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION & VISION ===== -->
+    <section class="relative overflow-hidden bg-white py-24">
+      <p class="pointer-events-none select-none absolute -top-8 sm:-top-14 left-0 right-0 text-center font-heading font-extrabold text-primary-50 text-[4.5rem] sm:text-[8rem] lg:text-[10rem] leading-none tracking-tight z-0" aria-hidden="true">PURPOSE</p>
+      <div class="absolute top-1/4 -left-24 w-96 h-96 bg-primary-100/50 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 -right-24 w-96 h-96 bg-gold-100/60 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <span class="inline-flex items-center gap-2 text-gold-600 font-semibold tracking-wide uppercase text-sm">
+            <i data-lucide="compass" class="w-4 h-4"></i>
+            Our Purpose
+          </span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Mission &amp; Vision</h2>
+          <p class="mt-4 text-slate-600">The principles that guide every venture we build.</p>
+        </div>
+
+        <div class="relative mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0 items-stretch">
+          <div data-aos="fade-right" class="group relative overflow-hidden rounded-3xl md:rounded-r-none shadow-soft aspect-[4/5] sm:aspect-[16/10] md:aspect-auto md:min-h-[420px]">
+            <img src="assets/images/skyline.jpg" alt="Kathmandu skyline representing our mission to build lasting ventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/95 via-primary-900/60 to-primary-900/10"></div>
+            <div class="absolute inset-0 p-8 sm:p-10 flex flex-col justify-end">
+              <div class="w-14 h-14 rounded-2xl bg-gold-500 text-white flex items-center justify-center shadow-soft">
+                <i data-lucide="target" class="w-7 h-7"></i>
+              </div>
+              <h3 class="mt-6 font-heading font-bold text-2xl sm:text-3xl text-white">Our Mission</h3>
+              <p class="mt-4 text-primary-100 leading-relaxed max-w-md">
+                To build sustainable, trustworthy ventures across real estate, trade and logistics —
+                creating lasting value for the communities, partners and clients we serve, one project at a time.
+              </p>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="group relative overflow-hidden rounded-3xl md:rounded-l-none shadow-soft aspect-[4/5] sm:aspect-[16/10] md:aspect-auto md:min-h-[420px]">
+            <img src="assets/images/plane.jpg" alt="View from above the Himalayas representing our vision for global reach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/95 via-primary-900/60 to-primary-900/10"></div>
+            <div class="absolute inset-0 p-8 sm:p-10 flex flex-col justify-end">
+              <div class="w-14 h-14 rounded-2xl bg-gold-500 text-white flex items-center justify-center shadow-soft">
+                <i data-lucide="eye" class="w-7 h-7"></i>
+              </div>
+              <h3 class="mt-6 font-heading font-bold text-2xl sm:text-3xl text-white">Our Vision</h3>
+              <p class="mt-4 text-primary-100 leading-relaxed max-w-md">
+                To become Nepal's most trusted diversified venture group — connecting local ambition with
+                global opportunity, and setting the standard for integrity-driven growth across every industry we enter.
+              </p>
+            </div>
+          </div>
+
+          <!-- connecting medallion (desktop only) -->
+          <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full bg-white shadow-soft border border-slate-100 items-center justify-center">
+            <span class="font-heading font-bold text-gold-500 text-lg">&amp;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="bg-primary-50/50 py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">What We Do</span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Our Ventures</h2>
+          <p class="mt-4 text-slate-600">Six pillars, one vision — building sustainable value across industries.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 relative marquee-wrap marquee-drag">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-primary-50/50 to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-primary-50/50 to-transparent z-10"></div>
+
+        <div class="marquee-track marquee-manual">
+          <!-- set A -->
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/bridge.jpg" alt="Kathmandu city view representing real estate and infrastructure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="building-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Real Estate &amp; Infrastructure</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Developing residential, commercial and infrastructure projects built to last.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/truck.jpg" alt="Highway near Kathmandu representing logistics routes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="truck" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Logistics &amp; Freight</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">End-to-end freight and supply chain solutions that keep goods moving reliably.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/plane.jpg" alt="View of Mount Everest and the Himalayas representing global trade and export" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="plane" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Global Trade &amp; Export</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Connecting markets through import &amp; export partnerships built on trust.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/warehouse.jpg" alt="Warehouse representing distribution services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="warehouse" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Warehousing &amp; Distribution</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Modern storage and fulfillment infrastructure that keeps supply chains moving.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/investment.jpg" alt="Investment and capital planning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="line-chart" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Investment &amp; Capital</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Strategic capital deployment and financial planning behind every venture.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/forest.jpg" alt="Pokhara valley with the Annapurna range representing sustainable ventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="leaf" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Sustainable Ventures</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Green and agro-based initiatives that invest in a more sustainable future.</p>
+            </div>
+          </div>
+
+          <!-- set B (duplicate, aria-hidden, for seamless loop) -->
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100" aria-hidden="true">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/bridge.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="building-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Real Estate &amp; Infrastructure</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Developing residential, commercial and infrastructure projects built to last.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100" aria-hidden="true">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/truck.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="truck" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Logistics &amp; Freight</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">End-to-end freight and supply chain solutions that keep goods moving reliably.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100" aria-hidden="true">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/plane.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="plane" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Global Trade &amp; Export</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Connecting markets through import &amp; export partnerships built on trust.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100" aria-hidden="true">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/warehouse.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="warehouse" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Warehousing &amp; Distribution</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Modern storage and fulfillment infrastructure that keeps supply chains moving.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100" aria-hidden="true">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/investment.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="line-chart" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Investment &amp; Capital</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Strategic capital deployment and financial planning behind every venture.</p>
+            </div>
+          </div>
+
+          <div class="venture-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow border border-slate-100" aria-hidden="true">
+            <div class="relative h-40 overflow-hidden">
+              <img src="assets/images/forest.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center">
+                <i data-lucide="leaf" class="w-6 h-6"></i>
+              </div>
+              <h3 class="mt-4 font-heading font-bold text-lg text-primary-900">Sustainable Ventures</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">Green and agro-based initiatives that invest in a more sustainable future.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Our Work</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Featured Projects</h2>
+        <p class="mt-4 text-slate-600">A glimpse into the ventures shaping our portfolio across industries.</p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-aos="fade-up" class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow aspect-[3/4]">
+          <img src="assets/images/skyline.jpg" alt="Kathmandu Valley skyline representing the Skyline Heights development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-gold-300">Real Estate</span>
+            <h3 class="mt-1 font-heading font-bold text-white text-lg">Skyline Heights</h3>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow aspect-[3/4]">
+          <img src="assets/images/port.jpg" alt="View of the Everest range representing global trade routes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-gold-300">Global Trade</span>
+            <h3 class="mt-1 font-heading font-bold text-white text-lg">Himalayan Trade Route</h3>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow aspect-[3/4]">
+          <img src="assets/images/warehouse.jpg" alt="Fulfillment and distribution center project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-gold-300">Trade</span>
+            <h3 class="mt-1 font-heading font-bold text-white text-lg">Distribution Center</h3>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow aspect-[3/4]">
+          <img src="assets/images/housekeys.jpg" alt="Residential property venture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-gold-300">Residential</span>
+            <h3 class="mt-1 font-heading font-bold text-white text-lg">Greenview Residences</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section id="why-us" class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Why B.K.S Venture</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Why Businesses Choose Us</h2>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-aos="zoom-in" class="text-center">
+          <div class="mx-auto w-16 h-16 rounded-full bg-gold-50 text-gold-600 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-8 h-8"></i>
+          </div>
+          <h3 class="mt-5 font-heading font-semibold text-lg text-primary-900">Trusted Expertise</h3>
+          <p class="mt-2 text-sm text-slate-600">Years of experience across multiple industries.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100" class="text-center">
+          <div class="mx-auto w-16 h-16 rounded-full bg-gold-50 text-gold-600 flex items-center justify-center">
+            <i data-lucide="globe" class="w-8 h-8"></i>
+          </div>
+          <h3 class="mt-5 font-heading font-semibold text-lg text-primary-900">Global Network</h3>
+          <p class="mt-2 text-sm text-slate-600">Partnerships and reach that span continents.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200" class="text-center">
+          <div class="mx-auto w-16 h-16 rounded-full bg-gold-50 text-gold-600 flex items-center justify-center">
+            <i data-lucide="lightbulb" class="w-8 h-8"></i>
+          </div>
+          <h3 class="mt-5 font-heading font-semibold text-lg text-primary-900">Innovation-Driven</h3>
+          <p class="mt-2 text-sm text-slate-600">Modern solutions for evolving markets.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="text-center">
+          <div class="mx-auto w-16 h-16 rounded-full bg-gold-50 text-gold-600 flex items-center justify-center">
+            <i data-lucide="leaf" class="w-8 h-8"></i>
+          </div>
+          <h3 class="mt-5 font-heading font-semibold text-lg text-primary-900">Sustainability Focus</h3>
+          <p class="mt-2 text-sm text-slate-600">Growth that respects people and planet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OUR PARTNERS ===== -->
+    <section id="partners" class="py-20 border-y border-slate-100 bg-white overflow-hidden">
+      <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Our Partners</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Trusted By Partners Across Industries</h2>
+        <p class="mt-4 text-slate-600">Working alongside organizations who share our commitment to quality and long-term growth.</p>
+      </div>
+
+      <div class="mt-14 relative marquee-wrap">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+        <div class="marquee-track partner-track">
+          <!-- set A -->
+          <div class="partner-logo group">
+            <i data-lucide="mountain" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Himal Capital</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="truck" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Sagarmatha Freight</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="plane" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Annapurna Airlines</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="building-2" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Norling Realty</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="shield" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Gorkha Holdings</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="gem" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Bagmati Textiles</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="compass" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">TransHimalaya Traders</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="leaf" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Everest Green Co.</span>
+          </div>
+          <div class="partner-logo group">
+            <i data-lucide="code-2" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Nepsus Tech</span>
+          </div>
+
+          <!-- set B (duplicate, for seamless loop) -->
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="mountain" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Himal Capital</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="truck" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Sagarmatha Freight</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="plane" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Annapurna Airlines</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="building-2" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Norling Realty</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="shield" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Gorkha Holdings</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="gem" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Bagmati Textiles</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="compass" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">TransHimalaya Traders</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="leaf" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Everest Green Co.</span>
+          </div>
+          <div class="partner-logo group" aria-hidden="true">
+            <i data-lucide="code-2" class="w-6 h-6 text-primary-700"></i>
+            <span class="font-heading font-bold text-slate-500 group-hover:text-primary-800 transition-colors">Nepsus Tech</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OUR PROCESS ===== -->
+    <section id="process" class="bg-primary-50/50 py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">How We Work</span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Our Process</h2>
+          <p class="mt-4 text-slate-600">A clear, disciplined approach that carries every venture from idea to impact.</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div data-aos="fade-up" class="relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+            <span class="font-heading font-extrabold text-4xl text-primary-100">01</span>
+            <div class="mt-4 w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+              <i data-lucide="search" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-5 font-heading font-bold text-lg text-primary-900">Discover</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">We study the market, the opportunity and the people behind it.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+            <span class="font-heading font-extrabold text-4xl text-primary-100">02</span>
+            <div class="mt-4 w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+              <i data-lucide="pencil-ruler" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-5 font-heading font-bold text-lg text-primary-900">Plan</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Every venture is structured with clear goals, timelines and risk controls.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200" class="relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+            <span class="font-heading font-extrabold text-4xl text-primary-100">03</span>
+            <div class="mt-4 w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+              <i data-lucide="hammer" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-5 font-heading font-bold text-lg text-primary-900">Execute</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Our teams on the ground deliver with quality control at every stage.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="300" class="relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+            <span class="font-heading font-extrabold text-4xl text-primary-100">04</span>
+            <div class="mt-4 w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-5 font-heading font-bold text-lg text-primary-900">Grow</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">We scale what works and reinvest in long-term, sustainable growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="bg-primary-900 py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <span class="text-gold-400 font-semibold tracking-wide uppercase text-sm">Testimonials</span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-white">What Our Partners Say</h2>
+        </div>
+      </div>
+
+      <div class="mt-16 relative marquee-wrap marquee-drag">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-primary-900 to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-primary-900 to-transparent z-10"></div>
+
+        <div class="marquee-track testimonial-track marquee-manual">
+          <!-- set A -->
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"A reliable partner from the first meeting. Their logistics team kept every shipment on schedule."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Aarav+Mehta&background=1c5133&color=fff&bold=true&size=128" alt="Aarav Mehta" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Aarav Mehta</p>
+                <p class="text-sm text-slate-400">Supply Chain Director</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"Our development project was delivered with real craftsmanship and total transparency."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Sophia+Bennett&background=c68d1f&color=fff&bold=true&size=128" alt="Sophia Bennett" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Sophia Bennett</p>
+                <p class="text-sm text-slate-400">Property Investor</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"Their commitment to sustainable practices sets them apart from every other venture group we've worked with."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Daniel+Osei&background=1c5133&color=fff&bold=true&size=128" alt="Daniel Osei" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Daniel Osei</p>
+                <p class="text-sm text-slate-400">Trade Partner</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"From site visits to closing, the team communicated every step. Exactly the transparency we needed."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Priya+Rai&background=c68d1f&color=fff&bold=true&size=128" alt="Priya Rai" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Priya Rai</p>
+                <p class="text-sm text-slate-400">Real Estate Client</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"Their cross-border trade expertise saved us weeks of delays on every shipment."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Michael+Tan&background=1c5133&color=fff&bold=true&size=128" alt="Michael Tan" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Michael Tan</p>
+                <p class="text-sm text-slate-400">Import Partner</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"A venture group that actually understands sustainable growth, not just profit."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Anish+Shrestha&background=c68d1f&color=fff&bold=true&size=128" alt="Anish Shrestha" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Anish Shrestha</p>
+                <p class="text-sm text-slate-400">Investment Partner</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- set B (duplicate, for seamless loop) -->
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8" aria-hidden="true">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"A reliable partner from the first meeting. Their logistics team kept every shipment on schedule."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Aarav+Mehta&background=1c5133&color=fff&bold=true&size=128" alt="Aarav Mehta" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Aarav Mehta</p>
+                <p class="text-sm text-slate-400">Supply Chain Director</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8" aria-hidden="true">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"Our development project was delivered with real craftsmanship and total transparency."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Sophia+Bennett&background=c68d1f&color=fff&bold=true&size=128" alt="Sophia Bennett" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Sophia Bennett</p>
+                <p class="text-sm text-slate-400">Property Investor</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8" aria-hidden="true">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"Their commitment to sustainable practices sets them apart from every other venture group we've worked with."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Daniel+Osei&background=1c5133&color=fff&bold=true&size=128" alt="Daniel Osei" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Daniel Osei</p>
+                <p class="text-sm text-slate-400">Trade Partner</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8" aria-hidden="true">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"From site visits to closing, the team communicated every step. Exactly the transparency we needed."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Priya+Rai&background=c68d1f&color=fff&bold=true&size=128" alt="Priya Rai" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Priya Rai</p>
+                <p class="text-sm text-slate-400">Real Estate Client</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8" aria-hidden="true">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"Their cross-border trade expertise saved us weeks of delays on every shipment."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Michael+Tan&background=1c5133&color=fff&bold=true&size=128" alt="Michael Tan" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Michael Tan</p>
+                <p class="text-sm text-slate-400">Import Partner</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card bg-white/5 border border-white/10 rounded-2xl p-8" aria-hidden="true">
+            <div class="flex gap-1 text-gold-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="mt-5 text-slate-200 leading-relaxed">"A venture group that actually understands sustainable growth, not just profit."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Anish+Shrestha&background=c68d1f&color=fff&bold=true&size=128" alt="Anish Shrestha" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-white">Anish Shrestha</p>
+                <p class="text-sm text-slate-400">Investment Partner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="max-w-4xl mx-auto px-6 lg:px-10 py-24">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">FAQ</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow" open>
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            What industries does B.K.S Venture operate in?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">We operate across real estate &amp; infrastructure, logistics &amp; freight, global trade &amp; export, and sustainable/agro ventures — connecting each to strengthen the others.</p>
+        </details>
+
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow">
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            Do you work with international partners?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">Yes. Our trade and logistics network spans multiple countries, and we actively partner with importers, exporters and investors worldwide.</p>
+        </details>
+
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow">
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            How do I start a project or partnership with you?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">Reach out through our contact form or email — our team reviews every inquiry and follows up to discuss scope, timelines and next steps.</p>
+        </details>
+
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow">
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            What does "sustainable ventures" mean at B.K.S?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">It means every development, trade route and freight operation is evaluated for long-term environmental and community impact, not just short-term returns.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+      <div data-aos="fade-up" class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-primary-700 to-primary-900 px-10 py-16 text-center shadow-soft">
+        <div class="absolute -top-16 -right-16 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl"></div>
+        <h2 class="relative font-heading font-bold text-3xl sm:text-4xl text-white">Let's Build Something Great Together</h2>
+        <p class="relative mt-4 text-primary-100 max-w-xl mx-auto">Ready to partner with a venture group that delivers across industries? We'd love to hear from you.</p>
+        <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20start%20a%20conversation." target="_blank" rel="noopener noreferrer" class="relative mt-8 inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-3.5 rounded-full transition-colors">
+          Start a Conversation
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 lg:px-10 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div data-aos="fade-right">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Contact</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Get In Touch</h2>
+        <p class="mt-4 text-slate-600 max-w-md">Have a project, partnership or trade opportunity in mind? Send us a message and our team will get back to you.</p>
+
+        <div class="mt-10 space-y-6">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5"></i></span>
+            <div>
+              <p class="text-sm text-slate-500">Email</p>
+              <a href="mailto:info@bksnepalventures.com" class="font-medium text-slate-800 hover:text-primary-700 transition-colors">info@bksnepalventures.com</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-5 h-5"></i></span>
+            <div>
+              <p class="text-sm text-slate-500">Phone</p>
+              <a href="tel:+9779803205897" class="font-medium text-slate-800 hover:text-primary-700 transition-colors">+977 980-3205897</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
+            <div>
+              <p class="text-sm text-slate-500">Office</p>
+              <p class="font-medium text-slate-800">Itahari-01, Pipal Chowk, Nepal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form data-aos="fade-left" class="bg-white rounded-2xl border border-slate-100 shadow-soft p-8 space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="text-sm font-medium text-slate-700">Full Name</label>
+            <input type="text" placeholder="Your name" class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-slate-700">Email</label>
+            <input type="email" placeholder="you@example.com" class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-slate-700">Subject</label>
+          <input type="text" placeholder="How can we help?" class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <div>
+          <label class="text-sm font-medium text-slate-700">Message</label>
+          <textarea rows="4" placeholder="Tell us about your project..." class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+        </div>
+        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white font-semibold px-6 py-3.5 rounded-lg transition-colors">
+          Send Message
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-primary-800 text-primary-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12">
+      <div class="lg:col-span-4">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="assets/images/image.png" alt="B.K.S Venture logo" class="h-11 w-11 object-contain">
+          <span class="font-heading font-bold text-xl text-white">B.K.S Venture</span>
+        </a>
+        <p class="mt-5 text-sm text-primary-300 leading-relaxed max-w-xs">A diversified venture group building real estate, trade and sustainable enterprise across the globe.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-gold-500 hover:border-gold-500 flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" aria-label="X (Twitter)" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-gold-500 hover:border-gold-500 flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-gold-500 hover:border-gold-500 flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-gold-400">Quick Links</h4>
+        <div class="mt-3 w-8 h-0.5 bg-gold-500/60"></div>
+        <ul class="mt-5 space-y-3 text-sm text-primary-300">
+          <li><a href="#about" class="hover:text-gold-400 transition-colors">About</a></li>
+          <li><a href="#services" class="hover:text-gold-400 transition-colors">Services</a></li>
+          <li><a href="#projects" class="hover:text-gold-400 transition-colors">Projects</a></li>
+          <li><a href="#why-us" class="hover:text-gold-400 transition-colors">Why Us</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-gold-400">Our Ventures</h4>
+        <div class="mt-3 w-8 h-0.5 bg-gold-500/60"></div>
+        <ul class="mt-5 space-y-3 text-sm text-primary-300">
+          <li>Real Estate &amp; Infrastructure</li>
+          <li>Logistics &amp; Freight</li>
+          <li>Global Trade &amp; Export</li>
+          <li>Sustainable Ventures</li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-gold-400">Get In Touch</h4>
+        <div class="mt-3 w-8 h-0.5 bg-gold-500/60"></div>
+        <ul class="mt-5 space-y-3 text-sm text-primary-300">
+          <li class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-gold-400 shrink-0"></i>
+            <a href="mailto:info@bksnepalventures.com" class="hover:text-gold-400 transition-colors">info@bksnepalventures.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-gold-400 shrink-0"></i>
+            <a href="tel:+9779803205897" class="hover:text-gold-400 transition-colors">+977 980-3205897</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+            <span>Itahari-01, Pipal Chowk, Nepal</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-400">
+        <p>&copy; <span id="year"></span> B.K.S Venture. All rights reserved.</p>
+        <p>Designed &amp; developed by <a href="http://www.nepsustech.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-200 hover:text-gold-400 transition-colors">Nepsus Tech</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
