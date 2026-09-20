@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 .venture-card {
   flex: 0 0 auto;
   width: 300px;
+  isolation: isolate;
 }
 
 @keyframes marquee {
@@ -153,6 +154,8 @@ h1, h2, h3, h4, h5, h6 {
 .testimonial-card {
   flex: 0 0 auto;
   width: 380px;
+  isolation: isolate;
+  background-color: #1b3627;
 }
 
 /* FAQ accordion: hide default marker, use custom chevron */
