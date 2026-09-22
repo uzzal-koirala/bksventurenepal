@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | B.K.S Venture</title>
+  <meta name="description" content="Get in touch with B.K.S Venture — call, WhatsApp, email or visit our office in Itahari, Nepal. Find us on the map and reach the right department fast.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Sora', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eef7f1',
+              100: '#d5ead9',
+              200: '#aed5b8',
+              300: '#7fba91',
+              400: '#4f9c6c',
+              500: '#2f7f4e',
+              600: '#22663d',
+              700: '#1c5133',
+              800: '#17402a',
+              900: '#0f2c1c',
+            },
+            gold: {
+              50: '#fdf9ec',
+              100: '#f9edc2',
+              200: '#f3d98a',
+              300: '#eac154',
+              400: '#dfa62f',
+              500: '#c68d1f',
+              600: '#a06f18',
+              700: '#7c5616',
+              800: '#634516',
+              900: '#513a16',
+            },
+          },
+          boxShadow: {
+            soft: '0 10px 40px -10px rgba(15, 44, 28, 0.25)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white">
+
+  <!-- ===== TOP UTILITY BAR ===== -->
+  <div id="topbar" class="fixed top-0 inset-x-0 z-50 bg-primary-900 text-white text-xs">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-9 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex items-center gap-3 text-white/70">
+          <a href="#" aria-label="Facebook" class="hover:text-gold-400 transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.676V1.325C24 .6 23.4 0 22.675 0"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="hover:text-gold-400 transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="hover:text-gold-400 transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M16.6 5.82c-.98-.9-1.6-2.16-1.66-3.57h-3.03v13.9c0 1.53-1.25 2.78-2.78 2.78a2.78 2.78 0 0 1 0-5.56c.28 0 .55.04.8.12V10.4a5.78 5.78 0 0 0-.8-.06 5.83 5.83 0 1 0 5.83 5.83V9.5a8.9 8.9 0 0 0 4.94 1.5V7.97c-1.13 0-2.19-.36-3.3-2.15z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter / X" class="hover:text-gold-400 transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+        <span class="hidden md:inline text-white/20">|</span>
+        <span class="hidden md:inline">We're Hiring! <a href="index.html#contact" class="text-gold-400 hover:text-gold-300 font-semibold inline-flex items-center gap-1">Apply Now <i data-lucide="arrow-right" class="w-3 h-3"></i></a></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+9779803205897" class="hidden sm:inline-flex items-center gap-1.5 text-white/80 hover:text-gold-400 transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i> +977-980-320-5897
+        </a>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <span class="inline-flex items-center gap-1.5 text-white/80">🇳🇵 Nepal</span>
+        <span class="hidden lg:inline text-white/20">|</span>
+        <div class="hidden lg:block relative" id="support-dropdown">
+          <button id="support-dropdown-btn" type="button" class="inline-flex items-center gap-1 text-white/80 hover:text-gold-400 transition-colors" aria-expanded="false" aria-controls="support-dropdown-panel">
+            Support <i data-lucide="chevron-down" id="support-dropdown-icon" class="w-3 h-3 transition-transform"></i>
+          </button>
+          <div id="support-dropdown-panel" class="absolute right-0 top-full mt-3 w-72 bg-white text-slate-700 rounded-xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible translate-y-1 transition-all duration-200 z-[70]">
+            <p class="px-3 pt-2 pb-1 text-xs font-semibold text-slate-400 uppercase tracking-wide">Support you can rely on</p>
+            <a href="#contact-form" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary-50 transition-colors">
+              <span class="w-9 h-9 rounded-lg bg-primary-50 flex items-center justify-center shrink-0"><i data-lucide="message-square-text" class="w-4 h-4 text-primary-700"></i></span>
+              <span class="leading-tight">
+                <span class="block text-sm font-semibold text-primary-900">Live Chat</span>
+                <span class="block text-xs text-slate-400">Real-time guidance</span>
+              </span>
+            </a>
+            <a href="mailto:info@bksnepalventures.com" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary-50 transition-colors">
+              <span class="w-9 h-9 rounded-lg bg-primary-50 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-4 h-4 text-primary-700"></i></span>
+              <span class="leading-tight">
+                <span class="block text-sm font-semibold text-primary-900">Email</span>
+                <span class="block text-xs text-slate-400">Reach out anytime</span>
+              </span>
+            </a>
+            <a href="tel:+9779803205897" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary-50 transition-colors">
+              <span class="w-9 h-9 rounded-lg bg-primary-50 flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-4 h-4 text-primary-700"></i></span>
+              <span class="leading-tight">
+                <span class="block text-sm font-semibold text-primary-900">Phone</span>
+                <span class="block text-xs text-slate-400">+977-980-320-5897</span>
+              </span>
+            </a>
+            <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary-50 transition-colors">
+              <span class="w-9 h-9 rounded-lg bg-primary-50 flex items-center justify-center shrink-0"><i data-lucide="message-circle" class="w-4 h-4 text-primary-700"></i></span>
+              <span class="leading-tight">
+                <span class="block text-sm font-semibold text-primary-900">WhatsApp</span>
+                <span class="block text-xs text-slate-400">Message us anytime</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="top" class="fixed top-9 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/image.png" alt="B.K.S Venture logo" class="h-12 w-12 object-contain">
+          <span class="font-heading font-bold text-xl text-primary-800 tracking-wide">B.K.S <span class="text-gold-500">Venture</span></span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600 whitespace-nowrap">
+          <a href="index.html" class="hover:text-primary-700 transition-colors">Home</a>
+          <a href="about.html" class="hover:text-primary-700 transition-colors">About</a>
+          <a href="ventures.html" class="hover:text-primary-700 transition-colors">Ventures</a>
+          <a href="#" class="text-primary-700">Contact</a>
+          <a href="#" class="hover:text-primary-700 transition-colors">Blogs</a>
+          <a href="#" class="hover:text-primary-700 transition-colors">Gallery</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4 shrink-0">
+          <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="hidden xl:flex items-center gap-2.5 whitespace-nowrap">
+            <span class="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center shrink-0">
+              <i data-lucide="message-circle" class="w-4 h-4 text-white"></i>
+            </span>
+            <span class="leading-tight">
+              <span class="block text-sm font-bold text-primary-900">+977-980-320-5897</span>
+              <span class="block text-[11px] text-slate-400">Sun&ndash;Fri, 10AM&ndash;6PM</span>
+            </span>
+          </a>
+
+          <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-colors shadow-soft whitespace-nowrap">
+            Get in Touch
+            <i data-lucide="arrow-up-right" class="w-4 h-4 shrink-0"></i>
+          </a>
+        </div>
+
+        <button id="menu-btn" class="lg:hidden text-primary-800" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile sidebar overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+
+  <!-- Mobile sidebar drawer -->
+  <aside id="mobile-menu" class="fixed top-0 right-0 z-[60] h-full w-[300px] max-w-[85vw] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col" aria-hidden="true">
+    <div class="flex items-center justify-between px-6 h-20 border-b border-slate-100 shrink-0">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/image.png" alt="B.K.S Venture logo" class="h-9 w-9 object-contain">
+        <span class="font-heading font-bold text-primary-800">B.K.S <span class="text-gold-500">Venture</span></span>
+      </a>
+      <button id="menu-close" class="text-slate-500 hover:text-primary-800 transition-colors" aria-label="Close menu">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-1">
+      <a href="index.html" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Home</a>
+      <a href="about.html" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">About</a>
+      <a href="ventures.html" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Ventures</a>
+      <a href="#" class="mobile-nav-link block text-primary-700 font-medium py-3 border-b border-slate-50">Contact</a>
+      <a href="#" class="mobile-nav-link block text-slate-700 font-medium py-3 border-b border-slate-50">Blogs</a>
+      <a href="#" class="mobile-nav-link block text-slate-700 font-medium py-3">Gallery</a>
+    </nav>
+
+    <div class="px-6 py-6 border-t border-slate-100 shrink-0">
+      <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="mobile-nav-link flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors">
+        Get in Touch <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </aside>
+
+  <main class="pt-[116px]">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="relative overflow-hidden bg-black min-h-[42vh] flex items-center">
+      <div class="absolute inset-0">
+        <img src="assets/images/skyline.jpg" alt="Kathmandu Valley skyline" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/45 to-black"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary-900/30 via-transparent to-gold-900/15"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-16 text-center">
+        <div data-aos="fade-up" class="flex items-center justify-center gap-2 text-sm text-slate-300">
+          <a href="index.html" class="hover:text-gold-300 transition-colors">Home</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          <span class="text-gold-300">Contact</span>
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="100" class="mt-5 font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white">
+          Let's Start a <span class="text-gold-400">Conversation</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="mt-5 text-lg text-slate-300 max-w-2xl mx-auto">
+          Questions about a project, partnership or trade opportunity? Our team responds fast — pick whichever way works for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== QUICK CONTACT CARDS ===== -->
+    <div class="relative z-20 -mt-12 sm:-mt-16 px-6" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="tel:+9779803205897" class="bg-white rounded-2xl shadow-soft border border-slate-100 p-6 hover:-translate-y-1 transition-transform">
+          <span class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></span>
+          <p class="mt-4 text-xs text-slate-400 uppercase tracking-wide">Call Us</p>
+          <p class="mt-1 font-heading font-semibold text-primary-900">+977 980-3205897</p>
+        </a>
+        <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl shadow-soft border border-slate-100 p-6 hover:-translate-y-1 transition-transform">
+          <span class="w-12 h-12 rounded-xl bg-[#25D366]/15 text-[#1c9950] flex items-center justify-center"><i data-lucide="message-circle" class="w-5 h-5"></i></span>
+          <p class="mt-4 text-xs text-slate-400 uppercase tracking-wide">WhatsApp</p>
+          <p class="mt-1 font-heading font-semibold text-primary-900">Chat with Us</p>
+        </a>
+        <a href="mailto:info@bksnepalventures.com" class="bg-white rounded-2xl shadow-soft border border-slate-100 p-6 hover:-translate-y-1 transition-transform">
+          <span class="w-12 h-12 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></span>
+          <p class="mt-4 text-xs text-slate-400 uppercase tracking-wide">Email</p>
+          <p class="mt-1 font-heading font-semibold text-primary-900 break-all">info@bksnepalventures.com</p>
+        </a>
+        <a href="https://www.google.com/maps?q=Itahari-01,+Pipal+Chowk,+Sunsari,+Nepal" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl shadow-soft border border-slate-100 p-6 hover:-translate-y-1 transition-transform">
+          <span class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
+          <p class="mt-4 text-xs text-slate-400 uppercase tracking-wide">Visit Us</p>
+          <p class="mt-1 font-heading font-semibold text-primary-900">Itahari-01, Pipal Chowk</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== PHONE DIRECTORY ===== -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Direct Lines</span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Call the Right Person</h2>
+          <p class="mt-4 text-slate-500">Prefer to speak to someone directly? Here's every line into B.K.S Venture.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <a href="tel:+9779852087097" data-aos="fade-up" class="group bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-soft hover:-translate-y-1 transition-all">
+            <span class="w-12 h-12 rounded-xl bg-primary-800 text-white flex items-center justify-center"><i data-lucide="user" class="w-5 h-5"></i></span>
+            <p class="mt-4 text-xs text-gold-600 font-semibold uppercase tracking-wide">Founder</p>
+            <p class="mt-1 font-heading font-semibold text-lg text-primary-900 group-hover:text-primary-700 transition-colors">985-2087097</p>
+          </a>
+
+          <a href="tel:+9779852087387" data-aos="fade-up" data-aos-delay="50" class="group bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-soft hover:-translate-y-1 transition-all">
+            <span class="w-12 h-12 rounded-xl bg-primary-800 text-white flex items-center justify-center"><i data-lucide="user" class="w-5 h-5"></i></span>
+            <p class="mt-4 text-xs text-gold-600 font-semibold uppercase tracking-wide">Chief Operating Officer</p>
+            <p class="mt-1 font-heading font-semibold text-lg text-primary-900 group-hover:text-primary-700 transition-colors">985-2087387</p>
+          </a>
+
+          <a href="tel:+9779768688149" data-aos="fade-up" data-aos-delay="100" class="group bg-primary-50/60 rounded-2xl p-6 border border-primary-100 hover:shadow-soft hover:-translate-y-1 transition-all">
+            <span class="w-12 h-12 rounded-xl bg-white text-primary-700 border border-primary-100 flex items-center justify-center"><i data-lucide="phone-call" class="w-5 h-5"></i></span>
+            <p class="mt-4 text-xs text-primary-600 font-semibold uppercase tracking-wide">Landline</p>
+            <p class="mt-1 font-heading font-semibold text-lg text-primary-900 group-hover:text-primary-700 transition-colors">976-8688149</p>
+          </a>
+
+          <a href="tel:+9779768688148" data-aos="fade-up" data-aos-delay="150" class="group bg-primary-50/60 rounded-2xl p-6 border border-primary-100 hover:shadow-soft hover:-translate-y-1 transition-all">
+            <span class="w-12 h-12 rounded-xl bg-white text-primary-700 border border-primary-100 flex items-center justify-center"><i data-lucide="phone-call" class="w-5 h-5"></i></span>
+            <p class="mt-4 text-xs text-primary-600 font-semibold uppercase tracking-wide">Landline</p>
+            <p class="mt-1 font-heading font-semibold text-lg text-primary-900 group-hover:text-primary-700 transition-colors">976-8688148</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT FORM + MAP ===== -->
+    <section id="contact-form" class="max-w-7xl mx-auto px-6 lg:px-10 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+      <div data-aos="fade-right" class="flex flex-col h-full">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Our Office</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Find Us on the Map</h2>
+        <p class="mt-4 text-slate-600 max-w-md">Drop by during office hours or reach out digitally — either way, we're glad to hear from you.</p>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 w-9 h-9 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            <div>
+              <p class="text-slate-400 text-xs">Office Address</p>
+              <p class="font-medium text-slate-800">Itahari-01, Pipal Chowk, Sunsari, Nepal</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 w-9 h-9 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="clock" class="w-4 h-4"></i></span>
+            <div>
+              <p class="text-slate-400 text-xs">Office Hours</p>
+              <p class="font-medium text-slate-800">Sun&ndash;Fri, 10:00 AM &ndash; 6:00 PM</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 w-9 h-9 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-4 h-4"></i></span>
+            <div>
+              <p class="text-slate-400 text-xs">Email</p>
+              <a href="mailto:info@bksnepalventures.com" class="font-medium text-slate-800 hover:text-primary-700 transition-colors">info@bksnepalventures.com</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 w-9 h-9 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            <div>
+              <p class="text-slate-400 text-xs">Phone</p>
+              <a href="tel:+9779803205897" class="font-medium text-slate-800 hover:text-primary-700 transition-colors">+977 980-3205897</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex-1 min-h-[320px] rounded-2xl overflow-hidden shadow-soft border border-slate-100">
+          <iframe
+            src="https://www.google.com/maps?q=Itahari-01,+Pipal+Chowk,+Sunsari,+Nepal&output=embed"
+            class="w-full h-full border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="B.K.S Venture office location — Itahari-01, Pipal Chowk, Nepal">
+          </iframe>
+        </div>
+      </div>
+
+      <form data-aos="fade-left" class="h-full flex flex-col bg-white rounded-2xl border border-slate-100 shadow-soft p-8 space-y-5" onsubmit="return false;">
+        <div>
+          <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Send a Message</span>
+          <h2 class="mt-2 font-heading font-bold text-2xl text-primary-900">We'll Get Back to You Fast</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="text-sm font-medium text-slate-700">Full Name</label>
+            <input type="text" required placeholder="Your name" class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-slate-700">Email</label>
+            <input type="email" required placeholder="you@example.com" class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="text-sm font-medium text-slate-700">Phone</label>
+            <input type="tel" placeholder="+977 98X-XXXXXXX" class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-slate-700">Venture / Department</label>
+            <select class="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-600 focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <option>General Inquiry</option>
+              <option>Real Estate &amp; Land Services</option>
+              <option>Logistics &amp; Freight</option>
+              <option>Global Trade &amp; Export</option>
+              <option>IT, Software &amp; AI</option>
+              <option>Investment &amp; Capital</option>
+              <option>Careers</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex-1 flex flex-col">
+          <div class="flex items-center justify-between">
+            <label for="contact-message" class="text-sm font-medium text-slate-700">Message</label>
+            <span class="text-xs text-slate-400"><span id="contact-message-count">0</span>/500</span>
+          </div>
+          <textarea id="contact-message" maxlength="500" placeholder="Tell us about your project..." class="mt-2 w-full flex-1 min-h-[120px] resize-none rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+        </div>
+        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white font-semibold px-6 py-3.5 rounded-lg transition-colors">
+          Send Message
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </section>
+
+    <!-- ===== DEPARTMENT CONTACTS ===== -->
+    <section class="py-24 bg-primary-50/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">Reach the Right Team</span>
+          <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Contact by Department</h2>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div data-aos="fade-up" class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <span class="w-11 h-11 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5"></i></span>
+            <h3 class="mt-4 font-heading font-semibold text-primary-900">Real Estate &amp; Land</h3>
+            <a href="mailto:realestate@bksnepalventures.com" class="mt-2 block text-sm text-slate-500 hover:text-primary-700 transition-colors break-all">realestate@bksnepalventures.com</a>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <span class="w-11 h-11 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center"><i data-lucide="truck" class="w-5 h-5"></i></span>
+            <h3 class="mt-4 font-heading font-semibold text-primary-900">Logistics &amp; Trade</h3>
+            <a href="mailto:trade@bksnepalventures.com" class="mt-2 block text-sm text-slate-500 hover:text-primary-700 transition-colors break-all">trade@bksnepalventures.com</a>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <span class="w-11 h-11 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center"><i data-lucide="cpu" class="w-5 h-5"></i></span>
+            <h3 class="mt-4 font-heading font-semibold text-primary-900">IT &amp; Digital Media</h3>
+            <a href="mailto:tech@bksnepalventures.com" class="mt-2 block text-sm text-slate-500 hover:text-primary-700 transition-colors break-all">tech@bksnepalventures.com</a>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <span class="w-11 h-11 rounded-xl bg-gold-100 text-gold-600 flex items-center justify-center"><i data-lucide="users" class="w-5 h-5"></i></span>
+            <h3 class="mt-4 font-heading font-semibold text-primary-900">Careers &amp; HR</h3>
+            <a href="mailto:careers@bksnepalventures.com" class="mt-2 block text-sm text-slate-500 hover:text-primary-700 transition-colors break-all">careers@bksnepalventures.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="max-w-4xl mx-auto px-6 lg:px-10 py-24">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <span class="text-gold-600 font-semibold tracking-wide uppercase text-sm">FAQ</span>
+        <h2 class="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary-900">Before You Reach Out</h2>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow" open>
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            How quickly will I get a response?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">We aim to respond to every inquiry within 24 business hours — WhatsApp and phone usually get the fastest reply.</p>
+        </details>
+
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow">
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            Can I visit your office without an appointment?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">Yes, walk-ins are welcome during office hours (Sun&ndash;Fri, 10 AM&ndash;6 PM), though booking ahead helps us have the right person ready to meet you.</p>
+        </details>
+
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow">
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            I'm not sure which department to contact — what do I do?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">Just use the general contact form or WhatsApp — our front desk routes every message to the right team the same day.</p>
+        </details>
+
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:shadow-soft transition-shadow">
+          <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-primary-900">
+            Do you take on international inquiries?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-primary-600 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">Absolutely. A large part of our trade, IT and cooperation ventures involve international partners — email is usually best for these.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-10 pb-24">
+      <div data-aos="fade-up" class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-primary-700 to-primary-900 px-10 py-16 text-center shadow-soft">
+        <div class="absolute -top-16 -right-16 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl"></div>
+        <h2 class="relative font-heading font-bold text-3xl sm:text-4xl text-white">Prefer to Talk Right Now?</h2>
+        <p class="relative mt-4 text-primary-100 max-w-xl mx-auto">Message us on WhatsApp and get a real reply from our team — no forms, no waiting.</p>
+        <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="relative mt-8 inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-3.5 rounded-full transition-colors">
+          Chat on WhatsApp
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-primary-800 text-primary-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/image.png" alt="B.K.S Venture logo" class="h-11 w-11 object-contain">
+          <span class="font-heading font-bold text-xl text-white">B.K.S Venture</span>
+        </a>
+        <p class="mt-5 text-sm text-primary-300 leading-relaxed max-w-xs">A diversified venture group building real estate, trade and sustainable enterprise across the globe.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-gold-500 hover:border-gold-500 flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" aria-label="X (Twitter)" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-gold-500 hover:border-gold-500 flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-gold-500 hover:border-gold-500 flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-gold-400">Quick Links</h4>
+        <div class="mt-3 w-8 h-0.5 bg-gold-500/60"></div>
+        <ul class="mt-5 space-y-3 text-sm text-primary-300">
+          <li><a href="about.html" class="hover:text-gold-400 transition-colors">About</a></li>
+          <li><a href="services.html" class="hover:text-gold-400 transition-colors">Services</a></li>
+          <li><a href="ventures.html" class="hover:text-gold-400 transition-colors">Ventures</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-gold-400">Our Ventures</h4>
+        <div class="mt-3 w-8 h-0.5 bg-gold-500/60"></div>
+        <ul class="mt-5 space-y-3 text-sm text-primary-300">
+          <li><a href="services.html#real-estate" class="hover:text-gold-400 transition-colors">Real Estate &amp; Infrastructure</a></li>
+          <li><a href="services.html#logistics" class="hover:text-gold-400 transition-colors">Logistics &amp; Freight</a></li>
+          <li><a href="services.html#global-trade" class="hover:text-gold-400 transition-colors">Global Trade &amp; Export</a></li>
+          <li><a href="services.html#sustainable" class="hover:text-gold-400 transition-colors">Sustainable Ventures</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-gold-400">Get In Touch</h4>
+        <div class="mt-3 w-8 h-0.5 bg-gold-500/60"></div>
+        <ul class="mt-5 space-y-3 text-sm text-primary-300">
+          <li class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-gold-400 shrink-0"></i>
+            <a href="mailto:info@bksnepalventures.com" class="hover:text-gold-400 transition-colors">info@bksnepalventures.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-gold-400 shrink-0"></i>
+            <a href="tel:+9779803205897" class="hover:text-gold-400 transition-colors">+977 980-3205897</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+            <span>Itahari-01, Pipal Chowk, Nepal</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-400">
+        <p>&copy; <span id="year"></span> B.K.S Venture. All rights reserved.</p>
+        <p>Designed &amp; developed by <a href="http://www.nepsustech.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-200 hover:text-gold-400 transition-colors">Nepsus Tech</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SUPPORT / CONSULTATION POPUP ===== -->
+  <div id="support-overlay" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="support-modal" class="fixed inset-0 z-[101] flex items-center justify-center p-4 opacity-0 pointer-events-none scale-95 transition-all duration-300">
+    <div class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 max-h-[92vh] overflow-y-auto">
+
+      <!-- Left: text / CTAs -->
+      <div class="p-8 sm:p-10 flex flex-col justify-center">
+        <h3 class="font-heading text-2xl sm:text-3xl font-bold text-primary-900 leading-tight">Still deciding?<br>Let us help.</h3>
+        <p class="mt-4 text-sm text-slate-500 leading-relaxed">
+          Have questions about real estate, logistics, global trade or investment ventures? Talk to our team and get the right solution for your needs.
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="tel:+9779803205897" class="flex items-center gap-2.5 bg-primary-800 hover:bg-primary-900 text-white rounded-xl px-3.5 py-3 transition-colors overflow-hidden">
+            <span class="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            <span class="text-left leading-tight min-w-0">
+              <span class="block text-[11px] text-white/70">Call Us</span>
+              <span class="block text-[13px] font-semibold whitespace-nowrap">+977-980-320-5897</span>
+            </span>
+          </a>
+          <a href="https://wa.me/9779803205897?text=Hi%20B.K.S%20Venture%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 bg-slate-100 hover:bg-slate-200 text-primary-900 rounded-xl px-3.5 py-3 transition-colors overflow-hidden">
+            <span class="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center shrink-0"><i data-lucide="message-circle" class="w-4 h-4 text-white"></i></span>
+            <span class="text-left leading-tight min-w-0">
+              <span class="block text-[11px] text-slate-500">WhatsApp Us</span>
+              <span class="block text-[13px] font-semibold whitespace-nowrap">Chat with Us</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-y-3 gap-x-4 text-sm text-slate-600">
+          <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary-600"></i> Trusted &amp; Reliable</span>
+          <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary-600"></i> Fast Response</span>
+          <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary-600"></i> Local Expertise</span>
+          <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary-600"></i> Trusted Partners</span>
+        </div>
+
+        <a href="#contact-form" data-close-support class="mt-7 flex items-center justify-center gap-2 bg-primary-900 hover:bg-primary-800 text-white text-sm font-semibold rounded-full px-6 py-3.5 transition-colors">
+          <span class="text-[11px] font-normal text-white/70">100% Free &nbsp;•&nbsp; No Obligation &nbsp;•&nbsp; Expert Advice</span>
+        </a>
+        <a href="#contact-form" data-close-support class="mt-2 flex items-center justify-center gap-2 bg-white border-2 border-primary-900 hover:bg-primary-50 text-primary-900 text-sm font-semibold rounded-full px-6 py-3 transition-colors">
+          Book a Free Consultation <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Right: image -->
+      <div class="relative hidden lg:block min-h-[420px] bg-primary-900">
+        <img src="assets/images/calling.png" alt="B.K.S Venture support" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/10 to-transparent"></div>
+
+        <button id="support-close" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 hover:bg-white flex items-center justify-center text-primary-900 transition-colors" aria-label="Close">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative h-full flex flex-col justify-end p-8 text-white">
+          <h4 class="text-lg font-semibold">Get expert guidance today</h4>
+          <div class="mt-4 flex items-center gap-6 text-xs">
+            <span class="flex flex-col items-center gap-1">
+              <i data-lucide="star" class="w-5 h-5 text-gold-400"></i> Rated 4.8
+            </span>
+            <span class="flex flex-col items-center gap-1">
+              <i data-lucide="shield-check" class="w-5 h-5 text-gold-400"></i> Verified
+            </span>
+            <span class="flex flex-col items-center gap-1">
+              <i data-lucide="users" class="w-5 h-5 text-gold-400"></i> 20,000+
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <button id="support-close-mobile" class="lg:hidden absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-primary-900 transition-colors" aria-label="Close">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

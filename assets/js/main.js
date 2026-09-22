@@ -51,10 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Live character counter for the contact form message field
-  const messageInput = document.getElementById('message');
-  const messageCount = document.getElementById('message-count');
-  if (messageInput && messageCount) {
+  // Live character counter for the contact form message field(s)
+  [['message', 'message-count'], ['contact-message', 'contact-message-count']].forEach(([inputId, countId]) => {
+    const messageInput = document.getElementById(inputId);
+    const messageCount = document.getElementById(countId);
+    if (!messageInput || !messageCount) return;
     const maxLen = messageInput.maxLength;
     const updateCount = () => {
       const len = messageInput.value.length;
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     messageInput.addEventListener('input', updateCount);
     updateCount();
-  }
+  });
 
   // Auto-sliding carousels that also support manual drag/swipe scrolling
   // (no visible arrows/scrollbar): auto-scroll pauses on hover or while the
@@ -182,4 +183,188 @@ document.addEventListener('DOMContentLoaded', () => {
     const isTestimonials = wrap.closest('#testimonials');
     initDragMarquee(wrap, isTestimonials ? 0.5 : 0.7);
   });
+
+  // ===== Support dropdown (top bar) =====
+  const supportDropdown = document.getElementById('support-dropdown');
+  const supportBtn = document.getElementById('support-dropdown-btn');
+  const supportPanel = document.getElementById('support-dropdown-panel');
+  const supportIcon = document.getElementById('support-dropdown-icon');
+
+  if (supportDropdown && supportBtn && supportPanel) {
+    const openDropdown = () => {
+      supportPanel.classList.remove('opacity-0', 'invisible', 'translate-y-1');
+      supportBtn.setAttribute('aria-expanded', 'true');
+      if (supportIcon) supportIcon.classList.add('rotate-180');
+    };
+    const closeDropdown = () => {
+      supportPanel.classList.add('opacity-0', 'invisible', 'translate-y-1');
+      supportBtn.setAttribute('aria-expanded', 'false');
+      if (supportIcon) supportIcon.classList.remove('rotate-180');
+    };
+
+    supportBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = supportBtn.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeDropdown() : openDropdown();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!supportDropdown.contains(e.target)) closeDropdown();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+  }
+
+  // ===== Support / consultation popup =====
+  const supportOverlay = document.getElementById('support-overlay');
+  const supportModal = document.getElementById('support-modal');
+  const supportClose = document.getElementById('support-close');
+  const supportCloseMobile = document.getElementById('support-close-mobile');
+
+  if (supportOverlay && supportModal) {
+    const openModal = () => {
+      supportOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      supportModal.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeModal = () => {
+      supportOverlay.classList.add('opacity-0', 'pointer-events-none');
+      supportModal.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+      document.body.style.overflow = '';
+      sessionStorage.setItem('bks-support-modal-seen', '1');
+    };
+
+    supportClose && supportClose.addEventListener('click', closeModal);
+    supportCloseMobile && supportCloseMobile.addEventListener('click', closeModal);
+    supportOverlay.addEventListener('click', closeModal);
+    document.querySelectorAll('[data-close-support]').forEach((el) => el.addEventListener('click', closeModal));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    if (!sessionStorage.getItem('bks-support-modal-seen')) {
+      setTimeout(openModal, 3000);
+    }
+  }
+
+  // ===== Hero: vertical looping venture pill list =====
+  const loopViewport = document.getElementById('venture-loop');
+  const loopTrack = document.getElementById('venture-loop-track');
+  if (loopViewport && loopTrack) {
+    const items = Array.from(loopTrack.children);
+    const visibleCount = 3;
+
+    // Clone the full list once at the end so the loop can reset seamlessly.
+    items.forEach((item) => loopTrack.appendChild(item.cloneNode(true)));
+    const allItems = Array.from(loopTrack.children);
+
+    let itemHeight = 0;
+    let index = 0;
+
+    const measure = () => {
+      // Round up so sub-pixel gaps never leave a sliver of the next pill visible.
+      itemHeight = Math.ceil(items[0].getBoundingClientRect().height) + 12; // + gap-3
+      loopViewport.style.height = `${itemHeight * visibleCount}px`;
+      loopTrack.style.transform = `translateY(-${index * itemHeight}px)`;
+    };
+
+    const setActive = () => {
+      const activeIndex = (index + 1) % allItems.length;
+      allItems.forEach((item, i) => {
+        item.classList.toggle('venture-pill--active', i === activeIndex);
+      });
+    };
+
+    const step = () => {
+      index += 1;
+      loopTrack.style.transform = `translateY(-${index * itemHeight}px)`;
+      setActive();
+
+      if (index === items.length) {
+        setTimeout(() => {
+          loopTrack.style.transition = 'none';
+          index = 0;
+          loopTrack.style.transform = 'translateY(0px)';
+          setActive();
+          requestAnimationFrame(() => {
+            loopTrack.style.transition = '';
+          });
+        }, 700);
+      }
+    };
+
+    measure();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(measure);
+    }
+    window.addEventListener('resize', measure);
+
+    setActive();
+    setInterval(step, 1900);
+  }
+
+  // ===== Ventures page: search / filter =====
+  const ventureSearch = document.getElementById('venture-search');
+  const ventureList = document.getElementById('venture-list');
+  const ventureEmpty = document.getElementById('venture-search-empty');
+
+  if (ventureSearch && ventureList) {
+    const items = Array.from(ventureList.querySelectorAll('.venture-item'));
+
+    const applyFilter = () => {
+      const query = ventureSearch.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      items.forEach((item) => {
+        const matches = !query || item.textContent.toLowerCase().includes(query);
+        item.hidden = !matches;
+        if (matches) {
+          visibleCount += 1;
+          item.open = query.length > 0;
+        }
+      });
+
+      if (ventureEmpty) {
+        ventureEmpty.classList.toggle('hidden', visibleCount !== 0);
+      }
+    };
+
+    ventureSearch.addEventListener('input', applyFilter);
+
+    // Arriving from the homepage hero search (?q=...): pre-fill and filter immediately.
+    const params = new URLSearchParams(window.location.search);
+    const incomingQuery = params.get('q');
+    if (incomingQuery) {
+      ventureSearch.value = incomingQuery;
+      applyFilter();
+
+      const searchSection = document.getElementById('venture-search-section');
+      if (searchSection) {
+        // Explicit offset math instead of scrollIntoView: the fixed header's
+        // height overlaps the top of the viewport. The scroll is deferred to
+        // the window 'load' event (not just DOMContentLoaded) because icon
+        // rendering and web fonts still shift the layout by ~100px right
+        // after DOMContentLoaded, which threw off an earlier, earlier-fired
+        // calculation.
+        const headerOffset = 130;
+        const doScroll = (behavior) => {
+          const top = searchSection.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({ top, behavior });
+        };
+        // A late reflow (icons/fonts settling) can still shift the layout
+        // after the first scroll lands, so re-snap once more shortly after.
+        const scrollTwice = () => {
+          doScroll('smooth');
+          setTimeout(() => doScroll('auto'), 500);
+        };
+        if (document.readyState === 'complete') {
+          setTimeout(scrollTwice, 50);
+        } else {
+          window.addEventListener('load', () => setTimeout(scrollTwice, 50));
+        }
+      }
+    }
+  }
 });
