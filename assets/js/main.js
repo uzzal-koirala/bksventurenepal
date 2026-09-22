@@ -51,6 +51,21 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  // Live character counter for the contact form message field
+  const messageInput = document.getElementById('message');
+  const messageCount = document.getElementById('message-count');
+  if (messageInput && messageCount) {
+    const maxLen = messageInput.maxLength;
+    const updateCount = () => {
+      const len = messageInput.value.length;
+      messageCount.textContent = len;
+      messageCount.parentElement.classList.toggle('text-red-500', len >= maxLen);
+      messageCount.parentElement.classList.toggle('text-slate-400', len < maxLen);
+    };
+    messageInput.addEventListener('input', updateCount);
+    updateCount();
+  }
+
   // Auto-sliding carousels that also support manual drag/swipe scrolling
   // (no visible arrows/scrollbar): auto-scroll pauses on hover or while the
   // user is actively dragging/touching, and resumes afterward.
